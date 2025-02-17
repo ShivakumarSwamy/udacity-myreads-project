@@ -21,13 +21,3 @@ npm start
 
 This will start the development server, and you can access the app at [http://localhost:3000](http://localhost:3000),
 if not opened automatically.
-
-
-# NOTE
-> If a book is assigned to a shelf on the main page and that book also appears on the search page, 
-> the correct shelf should be selected for that book on the search page. 
-> If that book's shelf is changed on the search page, that change should be reflected on the main page as well. 
-> The option "None" should be selected if a book has not been assigned to a shelf.
-
-Please note, I have implemented the above feature as per how it's shown in video, where for new book "Add to..." is shown
-instead of "Move to..." and "None" shelf option is not given with no default option. 

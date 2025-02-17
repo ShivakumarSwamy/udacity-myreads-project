@@ -35,17 +35,12 @@ const Book = ({book, moveToShelf}) => {
                             }}
                         ></div>
                         <div className="book-shelf-changer">
-                            <select value={book.shelf === undefined ? "" : book.shelf} onChange={handleOnChangeShelf}>
-                                <option value="" disabled>
-                                    {book.shelf === undefined ? "Add to..." : "Move to..."}
-                                </option>
-
+                            <select value={book.shelf} onChange={handleOnChangeShelf}>
+                                <option value="" disabled>Move to...</option>
                                 <option value="currentlyReading">Currently Reading</option>
                                 <option value="wantToRead">Want to Read</option>
                                 <option value="read">Read</option>
-                                {
-                                    book.shelf !== undefined && <option value="none">None</option>
-                                }
+                                <option value="none">None</option>
                             </select>
                         </div>
                     </div>

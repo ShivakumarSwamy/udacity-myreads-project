@@ -22,12 +22,10 @@ const SearchBooks = ({books, updateBooks}) => {
                         if (searchResults.error) {
                             setShowSearchBooks([]);
                         } else {
-                            // check if book is already in shelf
+                            // check if book is already in shelf, else add none to shelf
                             searchResults.forEach(searchBook => {
                                 const book = books.find(book => book.id === searchBook.id);
-                                if (book) {
-                                    searchBook.shelf = book.shelf;
-                                }
+                                searchBook.shelf = book ? book.shelf : "none";
                             });
                             setShowSearchBooks(searchResults);
                         }
